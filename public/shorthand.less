@@ -1,0 +1,121 @@
+// BEGIN Less definitions
+
+// Do Not Modify these definitions.
+// To edit definitions edit /apps/blocks/definitions.less
+
+.rounded (@radius: 5px) {
+  border-radius: @radius;
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+}
+
+
+.rounded-top (@radius: 5px) {
+  border-radius: @radius @radius 0px 0px; 
+  -moz-border-radius: @radius @radius 0px 0px; 
+  -webkit-border-radius: @radius @radius 0px 0px;
+}
+
+
+.rounded-bottom (@radius: 5px) {
+  border-radius: 0px 0px @radius @radius; 
+  -moz-border-radius: 0px 0px @radius @radius; 
+  -webkit-border-radius: 0px 0px @radius @radius;
+}
+
+.rounded-bottom-left (@radius: 5px) {
+  border-radius: 0px 0px 0px @radius; 
+  -moz-border-radius: 0px 0px 0px @radius; 
+  -webkit-border-radius: 0px 0px 0px @radius;
+}
+
+
+.rounded-bottom-right (@radius: 5px) {
+  border-radius: 0px 0px @radius 0px; 
+  -moz-border-radius: 0px 0px @radius 0px; 
+  -webkit-border-radius: 0px 0px @radius 0px;
+}
+
+
+
+.rounded-left (@radius: 5px) {
+  border-radius: @radius 0px 0px @radius; 
+  -moz-border-radius: @radius 0px 0px @radius; 
+  -webkit-border-radius: @radius 0px 0px @radius;
+}
+
+.rounded-right (@radius: 5px) {
+  border-radius: 0px @radius @radius 0px; 
+  -moz-border-radius: 0px @radius @radius 0px; 
+  -webkit-border-radius: 0px @radius @radius 0px;
+}
+
+.equal-height (@radius: 0) {
+ padding-bottom: 20000px + @radius;
+ margin-bottom: -20000px;
+}
+
+.gradient (@S:#bcbcbc, @E:#dbdbdb, @P:34%){
+ background-image: linear-gradient(bottom, @E @P, @S 100%);
+ background-image: -o-linear-gradient(bottom, @E @P, @S 100%);
+ background-image: -moz-linear-gradient(bottom, @E @P, @S 100%);
+ background-image: -webkit-linear-gradient(bottom, @E @P, @S 100%);
+ background-image: -ms-linear-gradient(bottom, @E @P, @S 100%);
+ background-image: -webkit-gradient(linear,left bottom,left top,color-stop(@P, @E),color-stop(1, @S) );
+ filter: ~"progid:DXImageTransform.Microsoft.gradient( startColorstr='@{S}', endColorstr='@{E}',GradientType=0 )";
+}
+
+
+
+
+
+.shadow1(@x, @y, @blur, @spread, @color) {
+ -webkit-box-shadow: @x @y @blur @spread @color;
+ -moz-box-shadow: @x @y @blur @spread @color;
+ box-shadow: @x @y @blur @spread @color;
+}
+
+
+
+
+.shadow(@x, @y, @blur, @spread, @color) {
+ -webkit-box-shadow: @x @y @blur @spread @color;
+ -moz-box-shadow: @x @y @blur @spread @color;
+ box-shadow: @x @y @blur @spread @color;
+}
+
+
+
+.fauxcolumn(@left:#DFFCAF,@right:#FFFFFF,@pos:250px){
+ background: linear-gradient(left, @left 0%,@left @pos,@right @pos,@right 100%);
+ background: -moz-linear-gradient(left, @left 0, @left @pos, @right @pos, @right 100%);
+ background: -webkit-gradient(linear, left top, right top, color-stop(0%,@left), color-stop(@pos,@left), color-stop(@pos,@right), color-stop(100%,@right));
+ background: -webkit-linear-gradient(left, @left 0%,@left @pos,@right @pos,@right 100%);
+ background: -o-linear-gradient(left, @left 0%,@left @pos,@right @pos,@right 100%);
+ background: -ms-linear-gradient(left, @left 0%,@left @pos,@right @pos,@right 100%);
+}
+
+
+.faux3column(@left:#CCCCCC, @middle:#DDDDDD, @right:#EEEEEE, @pos:250px, @pos1:500px){
+
+ background-image: linear-gradient(left , @left @pos, @middle @pos, @middle @pos1, @right @pos1);
+ background-image: -o-linear-gradient(left , @left @pos, @middle @pos, @middle @pos1, @right @pos1);
+ background-image: -moz-linear-gradient(left , @left @pos, @middle @pos, @middle @pos1, @right @pos1);
+ background-image: -webkit-linear-gradient(left , @left @pos, @middle @pos, @middle @pos1, @right @pos1);
+ background-image: -ms-linear-gradient(left , @left @pos, @middle @pos, @middle @pos1, @right @pos1);
+
+
+}
+
+
+
+.transition(@property_name:all, @duration:1s, @timing_function:ease-in-out, @delay:0){
+ -webkit-transition: @property_name @duration @timing_function @delay;  				
+ -moz-transition: @property_name @duration @timing_function @delay;  				
+ -o-transition: @property_name @duration @timing_function @delay;  				
+ -transition: @property_name @duration @timing_function @delay;
+}
+
+
+
+// END Less definitions
